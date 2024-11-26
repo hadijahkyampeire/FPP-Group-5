@@ -7,10 +7,10 @@ public class Prog1 {
         Random random = new Random();
         int randomIntX = random.nextInt(1, 9);
         double comp1 = Math.pow(PI, randomIntX);
-        System.out.println("Comp1 value is " + comp1);
+        System.out.printf("Comp1 value is %.2f", comp1);
 
         int randomIntY = random.nextInt(3, 14);
         double comp2 = Math.pow(randomIntY, PI);
-        System.out.println("Comp2 value is " + comp2);
+        System.out.printf("Comp2 value is %.2f", comp2);
     }
 }
