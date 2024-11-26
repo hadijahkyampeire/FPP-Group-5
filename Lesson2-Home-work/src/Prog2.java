@@ -12,6 +12,5 @@ public class Prog2 {
         float roundedSum = val1 + val2 + val3;
         int value = Math.round(roundedSum);
         System.out.println("rounded sum value is " + value);
-        System.out.println(value);
     }
 }
