@@ -1,4 +1,6 @@
-public class question5 {
+package question5;
+
+public class RecursiveArrayMaxValue {
     public static void main(String[] args) {
         // array to test
         int[] arr = {5, -3, 6, 1, 9, 4};

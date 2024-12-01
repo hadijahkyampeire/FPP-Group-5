@@ -1,6 +1,6 @@
 package question4;
 
-public class IsPalindrome {
+public class RecursivePalindrome {
     // Public utility method for the palindrome check
     public static boolean isPalindrome(int num) {
         // -ve numbers not palindromes

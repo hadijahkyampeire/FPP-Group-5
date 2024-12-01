@@ -1,9 +1,9 @@
 package question3;
 
-public class ReverseArray {
+public class RecursiveReverseArray {
 
     public static void main(String[] args) {
-        ReverseArray reverser = new ReverseArray();
+        RecursiveReverseArray reverser = new RecursiveReverseArray();
         int[] array = {1, 3, 5, 7, 9, 13};
 
         System.out.print("Before Reverse: ");

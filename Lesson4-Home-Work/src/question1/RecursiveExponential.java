@@ -1,6 +1,6 @@
 package question1;
 
-public class Exponential {
+public class RecursiveExponential {
     // Recursive method to calculate x raised to the power of n
     public double power(double x, int n) {
         // Base case: Any number x to the power 0 is always 1
@@ -13,7 +13,7 @@ public class Exponential {
 
     public static void main(String[] args) {
         // Create an instance of question1.Exponential
-        Exponential exp = new Exponential();
+        RecursiveExponential exp = new RecursiveExponential();
 
         // Call the power method with x = 2 and n = 10
         double result = exp.power(2, 10);

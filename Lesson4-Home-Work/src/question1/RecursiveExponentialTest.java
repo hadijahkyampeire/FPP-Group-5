@@ -4,8 +4,8 @@ import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ExponentialTest {
-    Exponential exponential = new Exponential();
+public class RecursiveExponentialTest {
+    RecursiveExponential exponential = new RecursiveExponential();
     @Test
     public void testPowerWhenExponentIsZero() {
         assertEquals(1, exponential.power(2, 0));

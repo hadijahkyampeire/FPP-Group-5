@@ -4,8 +4,8 @@ import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ReverseArrayTest {
-    ReverseArray reverseArray = new ReverseArray();
+public class RecursiveReverseArrayTest {
+    RecursiveReverseArray reverseArray = new RecursiveReverseArray();
 
     @Test
     public void testReverseArray_NullArray_ShouldThrowException() {
