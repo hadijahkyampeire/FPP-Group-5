@@ -9,12 +9,12 @@ public class WashingMachine implements Appliance {
     }
 
     @Override
-    public double getReading() {
+    public int getReading() {
         return loadCapacity;
     }
 
     @Override
-    public void performAction() {
-        System.out.println("Starting wash cycle with load capacity: " + loadCapacity + "kg. \n");
+    public void performFunction() {
+        System.out.println("Starting wash cycle with load capacity: " + getReading() + "kg. \n");
     }
 }

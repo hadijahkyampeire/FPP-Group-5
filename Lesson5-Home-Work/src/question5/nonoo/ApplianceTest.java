@@ -7,6 +7,8 @@ public class ApplianceTest {
             new Refrigerator(4),
             new Microwave(800)
         };
+        System.out.println("THIS IS THE NO OOP SOLUTION: \n");
+
         for (Object appliance : appliances) {
             if (appliance instanceof WashingMachine) {
                 WashingMachine wm = (WashingMachine) appliance;

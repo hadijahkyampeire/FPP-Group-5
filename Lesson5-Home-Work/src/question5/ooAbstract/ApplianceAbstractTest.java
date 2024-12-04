@@ -1,7 +1,6 @@
-package question5.ooInterface;
+package question5.ooAbstract;
 
-// This is the OO solution for the non-OOO implementation using an interface
-public class ApplianceTest {
+public class ApplianceAbstractTest {
     public static void main(String[] args) {
         Appliance washingMachine = new WashingMachine(7);
         Appliance refrigerator = new Refrigerator(4);
@@ -9,7 +8,7 @@ public class ApplianceTest {
 
         Appliance[] appliances = {microwave, refrigerator, washingMachine};
 
-        System.out.println("THIS IS THE INTERFACE SOLUTION: \n");
+        System.out.println("THIS IS THE ABSTRACT SOLUTION: \n");
         for (Appliance appliance : appliances) {
             System.out.println("Appliance Name: " + appliance.getClass().getSimpleName());
             appliance.performFunction();

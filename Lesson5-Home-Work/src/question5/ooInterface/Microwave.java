@@ -13,12 +13,12 @@ public class Microwave implements Appliance {
     }
 
     @Override
-    public double getReading() {
+    public int getReading() {
         return powerLevel;
     }
 
     @Override
-    public void performAction() {
-        System.out.println("Heating food at power level: " + powerLevel + ". \n");
+    public void performFunction() {
+        System.out.println("Heating food at power level: " + getReading() + ". \n");
     }
 }
