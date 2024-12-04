@@ -18,12 +18,12 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
 
     @Override
     double getPayment() {
-        return  baseSalary + (grossSales * super.getCommissionRate()) ;
+        return  baseSalary + (grossSales * commissionRate) ;
     }
 
     @Override
     public String toString() {
-        return String.format("Base-Salaried Commission Employee: %s\nBase Salary: %.2f",
-                super.toString(), getBaseSalary());
+        return String.format("Base-Salaried Commission Employee: %s Base Salary: %.2f \n Salary: %.2f \n",
+                super.toString(), getBaseSalary(), getPayment());
     }
 }

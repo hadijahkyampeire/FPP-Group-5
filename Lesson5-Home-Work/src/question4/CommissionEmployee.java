@@ -33,7 +33,7 @@ public class CommissionEmployee extends Employee {
 
     @Override
     public String toString() {
-        return String.format("Commission Employee: %s\n Gross Sales: %.2f;\n Commission Rate: %.2f",
-                super.toString(), getGrossSales(), getCommissionRate());
+        return String.format("Commission Employee: %s\n Gross Sales: %.2f;\n Commission Rate: %.2f \n Salary: %.2f \n",
+                super.toString(), getGrossSales(), getCommissionRate(), getPayment());
     }
 }
