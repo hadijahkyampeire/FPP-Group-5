@@ -14,7 +14,7 @@ class Person {
 	}
 
 	// --------------------------------------------------------------
-	public String getLast() {
+	public String getLastName() {
 	// get last name
 			return lastName;
 	}

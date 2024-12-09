@@ -1,5 +1,7 @@
 package prob1;
 
+import java.util.Arrays;
+
 // Common task : Make sure to check your code should not throw any run time exception
 public class MyPersonList {
 	private final int INITIAL_LENGTH = 3;
@@ -14,26 +16,55 @@ public class MyPersonList {
 
 	// 1. Implement method to Add as last element, make sure you have enough room else call resize()
 	public void add(Person s) {
-		
+		if(s == null) return;
+		if(size == PersonArray.length) {
+			resize();
+		}
+		PersonArray[size] = s;
+		size++;
 	}
 
 	// 2. get person information by passing index
 	public Person get(int i) {
-		return null;
+		if (i < 0 || i >= size) return null;
+		return PersonArray[i];
 	}
 
 	// 3. Find the Person object using lastname
 	public boolean find(String lastName) {
+		if(lastName == null || size == 0) return false;
+		for(int i = 0; i < size; i++) {
+			if (lastName.equals(PersonArray[i].getLastName())) {
+				return true;
+			};
+		}
 		return false;
 	}
  
   	// 4. Remove the person object by passing its lastname
 	public boolean remove(String lastName) {
-		return false;
+		if (lastName == null || size == 0) return false;
+		int index = -1;
+		for(int i = 0; i < size; i++) {
+			if (lastName.equals(PersonArray[i].getLastName())) {
+				index = i;
+				break;
+			}
+		}
+		if (index == -1) return false;
+
+		Person[] temp = new Person[PersonArray.length]; /// confirm this
+		System.arraycopy(PersonArray, 0, temp, 0, index);
+		System.arraycopy(PersonArray, index + 1, temp, index, PersonArray.length - (index + 1));
+		PersonArray = temp;
+		size--;
+		return true;
 	}
   	// 5. Resizing the list
 	private void resize() {
-		
+		if(size == PersonArray.length) {
+			PersonArray = Arrays.copyOf(PersonArray, PersonArray.length * 2);
+		}
 	}
    // To display all the persons list
 	public String toString() {
