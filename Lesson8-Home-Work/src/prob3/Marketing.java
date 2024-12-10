@@ -2,6 +2,7 @@ package prob3;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Marketing {
 	private String employeename;
@@ -38,9 +39,31 @@ public class Marketing {
 		this.salesamount = salesamount;
 	}
 
-	@Override
-	public String toString() {
-		return employeename + " " + productname + " " + salesamount;
+	public static ArrayList<Marketing> getEmployeesMarketing(ArrayList<Marketing> marketings) {
+		ArrayList<Marketing> employeesMarketing = new ArrayList<>();
+		for (Marketing marketing : marketings) {
+			if(marketing.getSalesamount() > 1000) {
+				employeesMarketing.add(marketing);
+			}
+		}
+		return employeesMarketing;
 	}
 
+	@Override
+	public String toString() {
+
+		return employeename + " " + productname + " " + "$"+salesamount + "\n";
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (o == null || getClass() != o.getClass()) return false;
+		Marketing marketing = (Marketing) o;
+		return Double.compare(salesamount, marketing.salesamount) == 0 && Objects.equals(employeename, marketing.employeename) && Objects.equals(productname, marketing.productname);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(employeename, productname, salesamount);
+	}
 }
