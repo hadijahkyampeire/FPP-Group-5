@@ -86,10 +86,24 @@ public class MyPersonList {
 		list.add(new Person("Paul", "Corozza", 51));
 		list.add(new Person("Joe", "Lermon", 53));
 		list.add(new Person("Anne", "Dow", 55));
+
 		System.out.println("\nSize() : " + list.size() + "\n" + list);
+		// remove person with last name Tom.
 		list.remove("Tom");
+		// no one with last name Tom, so size is still the same
 		System.out.println("\nSize() : " + list.size() + "\n" + list);
+		// false because there is no one with last name Lermon.
 		System.out.println("\nSearching of Lermon: " + list.find("Lermon"));
 		System.out.println(list.get(2));
+		// Add a new person with last name Tom.
+		list.add(new Person("Tom", "Tommy", 36));
+		// size increases to 5
+		System.out.println("\nSize() : " + list.size() + "\n" + list);
+		//Remove person with last name Tom.
+		list.remove("Tom");
+		//Tom existed and is removed. Size is back to 4.
+		System.out.println("\nSize() : " + list.size() + "\n" + list);
+		//Tom not found since he was deleted.
+		System.out.println(list.find("Tom"));
 	}
 }
