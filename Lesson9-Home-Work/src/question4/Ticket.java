@@ -3,20 +3,16 @@ package question4;
 import java.util.Random;
 
 public class Ticket {
-    private int ticketId;
+    private final String ticketId;
     private String description;
 
-    public Ticket(String description) {
-        this.ticketId = new Random().nextInt();
+    public Ticket(String ticketId, String description) {
+        this.ticketId = ticketId;
         this.description = description;
     }
 
-    public int getTicketId() {
+    public String getTicketId() {
         return ticketId;
-    }
-
-    public void setTicketId(int ticketId) {
-        this.ticketId = ticketId;
     }
 
     public String getDescription() {
@@ -25,5 +21,10 @@ public class Ticket {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket: " + "ticketId: " + getTicketId() + ", description: " + getDescription() + "\n";
     }
 }
