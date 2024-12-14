@@ -12,6 +12,7 @@ class Book {
         this.author = author;
         this.isBorrowed = false;
     }
+
     public String getISBN() {
         return ISBN;
     }
@@ -21,9 +22,9 @@ class Book {
     public boolean isBorrowed() {
         return isBorrowed;
     }
+
     @Override
     public String toString() {
-        return "Book [ISBN=" + ISBN + ", title=" + title + ", author=" + author;
-//        return String.format("Book{ISBN='\{ISBN}', title='\{title}', author='\{author}', isBorrowed=\{isBorrowed}}");
+        return "ISBN:" + ISBN + ", title:" + title + ", author:" + author + ", borrowed:" + isBorrowed;
     }
 }
